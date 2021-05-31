@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { Button, Container } from 'react-bootstrap';
 
 const Home = () => {
@@ -20,14 +18,13 @@ const Home = () => {
           <div className="links">
             <Button className="btn btn-dark btn-lg login-button">
               <Link className="link1" to="/login">
-                <FontAwesomeIcon className="far user" icon={faUser} /> Login
+                Get Started
               </Link>
             </Button>
 
             <Button className="btn btn-dark btn-lg register-button">
               <Link className="link2" to="/register">
-                <FontAwesomeIcon className="far userplus" icon={faUserPlus} />
-                Register
+               Already Have An Account
               </Link>
             </Button>
           </div>
