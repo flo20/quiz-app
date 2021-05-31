@@ -17,13 +17,13 @@ const Home = () => {
 
           <div className="links">
             <Button className="btn btn-dark btn-lg login-button">
-              <Link className="link1" to="/login">
+              <Link className="link1" to="/getstarted">
                 Get Started
               </Link>
             </Button>
 
             <Button className="btn btn-dark btn-lg register-button">
-              <Link className="link2" to="/register">
+              <Link className="link2" to="/login">
                Already Have An Account
               </Link>
             </Button>

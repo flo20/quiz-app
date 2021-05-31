@@ -5,7 +5,7 @@ const User = require('../Models/userSchema');
 
 //passport authentication callback
 
-router.post('/register', (req, res, next) => {
+router.post('/login', (req, res, next) => {
   passport.authenticate(
     'local-signup',
 
@@ -32,7 +32,7 @@ router.post('/register', (req, res, next) => {
   )(req, res, next);
 });
 
-router.post('/login', (req, res, next) => {
+router.post('/getstarted', (req, res, next) => {
   passport.authenticate(
     'local-signin',
 

@@ -1,32 +1,29 @@
 
 import React from 'react'
 import { Fragment } from 'react'
-import "./LogIn.css";
 
-export default function LogIn() {
+export default function GetStarted() {
   return (
     <Fragment>
       <div className="welcome-box">
 Welcome!
       </div>
       <div className="login-form">
-Login
+        Sign Up
 <div className="input-container">
   <input type="text" className="user-name" placeholder="Enter username"/>
-  <input type="text" className="user-password" placeholder="Enter password"/>
+  <input type="text" className="user-password" placeholder="Create password"/>
+  <input type="text" className="user-password" placeholder="Confirm password"/>
 </div>
 <div className="button-container">
-<button>Login</button>
-<button>Don't have an account? Signup</button>
+<button>Sign Up</button>
+<button>Already have an account? Get Started</button>
 </div>
 
       </div>
     </Fragment>
   )
 }
-
-
-
 
 
 

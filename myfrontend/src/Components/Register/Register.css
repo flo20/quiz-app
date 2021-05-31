@@ -1,0 +1,22 @@
+.welcome-box{
+    margin: auto;
+    width: 50%;
+    padding: 100px;
+    background: beige;
+  }
+  
+  .login-form{
+    z-index: 5px;
+    margin: auto;
+    top: 2px;
+    width: 20%;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+  }
+  .button-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
