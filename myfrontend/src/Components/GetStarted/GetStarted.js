@@ -1,26 +1,53 @@
 
-import React from 'react'
-import { Fragment } from 'react'
+import React, { Fragment, useState } from "react";
+
 
 export default function GetStarted() {
+  const [userName,setUserName] = useState("");
+  const [passWord, setPassWord] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+
+ const handleUserChange=(e)=>{
+    //console.log("Changed user");
+    setUserName(e.target.value)
+  }
+  const handleUserPassword=(e)=>{
+    //console.log("Changed user");
+    setPassWord(e.target.value)
+  }
+  const handleConfirmPassword=(e)=>{
+    //console.log("Changed user");
+    setConfirmPassword(e.target.value)
+  }
+
+  const handleSignup =(e)=>{
+    e.preventDefault();
+    alert("Signed up");
+  }
+
   return (
     <Fragment>
       <div className="welcome-box">
-Welcome!
+      Welcome!
       </div>
       <div className="login-form">
-        Sign Up
-<div className="input-container">
-  <input type="text" className="user-name" placeholder="Enter username"/>
-  <input type="text" className="user-password" placeholder="Create password"/>
-  <input type="text" className="user-password" placeholder="Confirm password"/>
-</div>
+        Sign 
+        <form onSubmit={handleSignup}>
+        <div className="input-container">
+  <input type="text" className="user-name" placeholder="Enter username" value={userName} onChange={handleUserChange}/>
+  <input type="password" className="user-password" placeholder="Create password" value={passWord} onChange={handleUserPassword}/>
+  <input type="password" className="user-password" placeholder="Confirm password" value={confirmPassword} onChange={handleConfirmPassword}/>
+        </div>
 <div className="button-container">
-<button>Sign Up</button>
+<button >Sign Up</button>
+</div>
+        </form>
+
 <button>Already have an account? Get Started</button>
 </div>
 
-      </div>
+    
     </Fragment>
   )
 }
