@@ -1,5 +1,7 @@
 
 import React, { Fragment, useState } from "react";
+//import axios from "axios";
+import {useFormik} from "formik";
 
 
 export default function GetStarted() {
@@ -7,6 +9,18 @@ export default function GetStarted() {
   const [passWord, setPassWord] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+
+  function BaseFormik(){
+    const {getFieldProps, handleSubmit} = useFormik({
+      initialValues:{
+        username:"",
+        password:""
+      },
+      onSubmit(values){
+
+      }
+    })
+  }
 
  const handleUserChange=(e)=>{
     //console.log("Changed user");
@@ -21,10 +35,21 @@ export default function GetStarted() {
     setConfirmPassword(e.target.value)
   }
 
-  const handleSignup =(e)=>{
-    e.preventDefault();
-    alert("Signed up");
-  }
+
+  // const handleSignup =(e)=>{
+  //   e.preventDefault();
+  //   alert("Signed up");
+  //   const formData = {
+  //     username: userName,
+  //     passWord: passWord,
+  //   }
+  //   try{
+  //     const data = axios.post("/getstarted",{formData})
+  //     console.log("Posted data", data);
+  //   } catch(err){
+  //     console.error(err);
+  //   }
+  // }
 
   return (
     <Fragment>
@@ -33,7 +58,7 @@ export default function GetStarted() {
       </div>
       <div className="login-form">
         Sign 
-        <form onSubmit={handleSignup}>
+        <form onSubmit={handleSubmit}>
         <div className="input-container">
   <input type="text" className="user-name" placeholder="Enter username" value={userName} onChange={handleUserChange}/>
   <input type="password" className="user-password" placeholder="Create password" value={passWord} onChange={handleUserPassword}/>
