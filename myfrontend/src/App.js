@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import GetStarted from './Components/GetStarted/GetStarted';
+import testFormik from './Components/GetStarted/TestFormik';
 import Register from './Components/Register/Register';
 import NavHeader from './Components/Navbar/Navbar';
 import About from './Components/About/About';
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/quiz/:category?" component={Quiz}></Route>
           <Route path="/result" component={Result}></Route>
           <Route path="/spinner" component={Indexwheel}></Route>
+          <Route path="/test" component={testFormik}></Route>
         </Switch>
       </Router>
       {/* <Footer /> */}

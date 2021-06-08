@@ -31,7 +31,7 @@ const NavHeader = () => {
       <Container>
         <Link to="/" className="navbar-brand main-brand">
           <img
-            src="assets/game-logo.png"
+            src="/assets/game-logo.png"
             alt="gamelogo"
             style={{ width: '200px' }}
           />

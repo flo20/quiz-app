@@ -58,7 +58,7 @@ export default function GetStarted() {
       </div>
       <div className="login-form">
         Sign 
-        <form onSubmit={handleSubmit}>
+        <form>
         <div className="input-container">
   <input type="text" className="user-name" placeholder="Enter username" value={userName} onChange={handleUserChange}/>
   <input type="password" className="user-password" placeholder="Create password" value={passWord} onChange={handleUserPassword}/>
