@@ -33,25 +33,46 @@ const formik = useFormik({
     validate
     
 })
-console.log("Form errors", formik.errors)
+console.log("Visited field", formik.touched)
 
     return (
         <div>
             <form onSubmit={formik.handleSubmit} className="input-container" style={{display:"flex", flexDirection:"column", width:"50%"}}>
                 <div>
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" id="name" onChange={formik.handleChange} value={formik.values.name}/>
-                {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+                <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                onChange={formik.handleChange} 
+                value={formik.values.name} 
+                onBlur={formik.handleBlur} //visited fields
+                />
+                {formik.touched.name && formik.errors.name ? <div>{formik.errors.name}</div> : null}
                 </div>
                <div>
                <label htmlFor="name">Email</label>
-                <input type="email" name="email" id="email" onChange={formik.handleChange} value={formik.values.email}/>
-                {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                onChange={formik.handleChange} 
+                value={formik.values.email}
+                onBlur={formik.handleBlur} //visited fields
+                />
+                {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
                </div>
               <div>
               <label htmlFor="channel">Channel</label>
-                <input type="text" name="channel" id="channel" onChange={formik.handleChange} value={formik.values.channel}/>
-                {formik.errors.channel ? <div>{formik.errors.channel}</div> : null}
+                <input 
+                type="text" 
+                name="channel" 
+                id="channel" 
+                onChange={formik.handleChange} 
+                value={formik.values.channel}
+                onBlur={formik.handleBlur} //visited fields
+                />
+                {formik.touched.channel && formik.errors.channel ? <div>{formik.errors.channel}</div> : null}
               </div>
                
                 <button type="submit">Submit</button>
